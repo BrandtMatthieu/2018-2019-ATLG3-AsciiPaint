@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public class Viewport {
 	private ArrayList<Canvas> canvases;
-	private int currentCanvasId;
 	private int canvasIdCount;
+	private int currentCanvasId;
 	private int canvasDefaultSizeX;
 	private int canvasDefaultSizeY;
 	private char canvasDefaultBackground;
 	private boolean canvasDefaultGrid;
 	private boolean canvasDefaultBorder;
 
-	public Viewport() {
+	public Viewport() throws IllegalAccessException {
 		this.setCanvases(new ArrayList<Canvas>());
-		this.setCurrentCanvasId(0);
 		this.setCanvasIdCount(0);
+		this.setCurrentCanvasId(0);
 		this.setCanvasDefaultSizeX(81);
 		this.setCanvasDefaultSizeY(51);
 		this.setCanvasDefaultBackground('.');
@@ -35,7 +35,10 @@ public class Viewport {
 		return currentCanvasId;
 	}
 
-	public void setCurrentCanvasId(int currentCanvasId) {
+	public void setCurrentCanvasId(int currentCanvasId) throws IllegalAccessException {
+		if(currentCanvasId < this.getCanvases().size() || currentCanvasId > this.getCanvasIdCount()) {
+			throw new IllegalAccessException();
+		}
 		this.currentCanvasId = currentCanvasId;
 	}
 
@@ -43,7 +46,10 @@ public class Viewport {
 		return canvasIdCount;
 	}
 
-	public void setCanvasIdCount(int canvasIdCount) {
+	public void setCanvasIdCount(int canvasIdCount) throws IllegalAccessException {
+		if(canvasIdCount < 0) {
+			throw new IllegalAccessException();
+		}
 		this.canvasIdCount = canvasIdCount;
 	}
 
@@ -51,7 +57,10 @@ public class Viewport {
 		return canvasDefaultSizeX;
 	}
 
-	public void setCanvasDefaultSizeX(int canvasDefaultSizeX) {
+	public void setCanvasDefaultSizeX(int canvasDefaultSizeX) throws IllegalAccessException {
+		if(canvasDefaultSizeX < 0) {
+			throw new IllegalAccessException();
+		}
 		this.canvasDefaultSizeX = canvasDefaultSizeX;
 	}
 
@@ -59,7 +68,10 @@ public class Viewport {
 		return canvasDefaultSizeY;
 	}
 
-	public void setCanvasDefaultSizeY(int canvasDefaultSizeY) {
+	public void setCanvasDefaultSizeY(int canvasDefaultSizeY) throws IllegalAccessException{
+		if(canvasDefaultSizeY < 0) {
+			throw new IllegalAccessException();
+		}
 		this.canvasDefaultSizeY = canvasDefaultSizeY;
 	}
 

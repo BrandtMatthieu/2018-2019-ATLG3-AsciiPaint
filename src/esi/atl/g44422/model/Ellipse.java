@@ -38,4 +38,15 @@ public class Ellipse extends Shape{
 		}
 		this.radiusY = radiusY;
 	}
+
+	public String toString() {
+		String str = this.getType().toString() + " |";
+		if(this.getType() == ShapeType.Ellipse) {
+			str += " Radius X: " + this.getRadiusX() + " Radius Y: " + this.getRadiusY();
+		} else if(this.getType() == ShapeType.Circle) {
+			str += " Radius: " + this.getRadiusX();
+		}
+		str += super.toString();
+		return str;
+	}
 }

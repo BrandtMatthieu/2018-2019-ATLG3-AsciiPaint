@@ -4,8 +4,8 @@ public class Point extends Shape {
 	private int x;
 	private int y;
 
-	public Point(int x, int y, Point center, char fill, char outline, int id) {
-		super(center, ShapeType.Point, fill, outline, id);
+	public Point(int x, int y, Point center, ShapeType type, char fill, char outline, int id) {
+		super(center, type, fill, outline, id);
 	}
 
 	public Point(int x, int y) {

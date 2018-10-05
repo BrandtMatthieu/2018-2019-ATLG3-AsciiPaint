@@ -15,6 +15,9 @@ public class Shape {
 		this.setId(id);
 	}
 
+	public Shape() {
+	}
+
 	public Point getCenter() {
 		return center;
 	}

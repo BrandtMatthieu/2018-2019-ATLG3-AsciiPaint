@@ -9,6 +9,7 @@ public class Point extends Shape {
 	}
 
 	public Point(int x, int y) {
+		super();
 		this.setX(x);
 		this.setY(y);
 	}

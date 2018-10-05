@@ -10,7 +10,7 @@ public class Ellipse extends Shape{
 			super.setType(ShapeType.Ellipse);
 			this.setRadiusX(radiusX);
 			this.setRadiusY(radiusY);
-		} else {
+		} else if(type == ShapeType.Circle) {
 			super.setType(ShapeType.Circle);
 			this.setRadiusX(radiusX);
 			this.setRadiusY(radiusY);
@@ -39,6 +39,7 @@ public class Ellipse extends Shape{
 		this.radiusY = radiusY;
 	}
 
+	@Override
 	public String toString() {
 		String str = this.getType().toString() + " |";
 		if(this.getType() == ShapeType.Ellipse) {

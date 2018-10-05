@@ -61,6 +61,7 @@ public class Shape {
 		this.id = id;
 	}
 
+	@Override
 	public String toString() {
 		return " Center: " + this.getCenter().toString() + " Fill: " + this.getFill() + " Outline: " + this.getOutline() + " Id: " + this.getId();
 	}

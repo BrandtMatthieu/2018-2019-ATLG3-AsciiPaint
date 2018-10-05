@@ -120,4 +120,9 @@ public class Canvas {
 	public void setHistory(ArrayList<String> history) {
 		this.history = history;
 	}
+
+	@Override
+	public String toString() {
+		return "Canvas | Id: " + this.getId() + " Shape count: " + this.getShapes().size() + " Size X: " + this.getSizeX() + " Size Y: " + this.getSizeY() + " Background: " + this.getBackground();
+	}
 }

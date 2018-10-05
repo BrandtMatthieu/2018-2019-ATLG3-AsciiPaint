@@ -31,6 +31,7 @@ public class Line extends Shape {
 		return new Point((p1.getX() + p2.getX()) / 2, (p1.getY() + p2.getY()) / 2);
 	}
 
+	@Override
 	public String toString() {
 		return "P1: " + this.getP1().toString() + " P2: " + this.getP2().toString() + super.toString();
 	}

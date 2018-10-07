@@ -28,11 +28,18 @@ public class Line extends Shape {
 	}
 
 	public Point calculateCenter(Point p1, Point p2) {
-		return new Point((p1.getX() + p2.getX()) / 2, (p1.getY() + p2.getY()) / 2);
+		return new Point((p1.getX() + p2.getX()) / 2.0, (p1.getY() + p2.getY()) / 2.0);
 	}
 
 	@Override
 	public String toString() {
 		return "P1: " + this.getP1().toString() + " P2: " + this.getP2().toString() + super.toString();
+	}
+
+	@Override
+	public boolean isInside(Point point) {
+		final double m = ((this.getP1().getY() - this.getP2().getY()) / (this.getP1().getX() - this.getP2().getX()));
+		final double p = this.getP1().getY() - (m * this.getP1().getX());
+		return (Math.abs(point.getY() - (m * point.getX()) - p) / Math.sqrt(1 + Math.pow(m, 2))) <= 0.5;
 	}
 }

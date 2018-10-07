@@ -63,6 +63,15 @@ public class Shape {
 
 	@Override
 	public String toString() {
-		return " Center: " + this.getCenter().toString() + " Fill: " + this.getFill() + " Outline: " + this.getOutline() + " Id: " + this.getId();
+		return " Center: " + this.getCenter().toString() + " Fill: " + this.getFill() + " Outline: " + this.getOutline()
+				+ " Id: " + this.getId();
+	}
+
+	public boolean isInside(Point p) {
+		return true;
+	}
+
+	public void move(double dx, double dy) {
+		this.center.move(dx, dy);
 	}
 }

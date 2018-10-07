@@ -6,6 +6,7 @@ import esi.atl.g44422.view.View;
 public class Main {
 
 	public static void main(String[] args) {
-		Controller controller = new Controller(new View());
+		Controller controller = new Controller();
+		controller.start();
 	}
 }

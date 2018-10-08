@@ -9,12 +9,13 @@ public class Line extends Shape {
 
 	/**
 	 * Creates a new line
-	 * @param p1 the first point of the line
-	 * @param p2 the second point of the line
-	 * @param type the type of the shape (line)
-	 * @param fill the fill of the line
+	 * 
+	 * @param p1      the first point of the line
+	 * @param p2      the second point of the line
+	 * @param type    the type of the shape (line)
+	 * @param fill    the fill of the line
 	 * @param outline the outline of the line
-	 * @param id the id of the line
+	 * @param id      the id of the line
 	 */
 	public Line(Point p1, Point p2, ShapeType type, char fill, char outline, int id) {
 		super(null, ShapeType.Line, fill, outline, id);
@@ -25,6 +26,7 @@ public class Line extends Shape {
 
 	/**
 	 * Returns the first point of the line
+	 * 
 	 * @return the first point of the line
 	 */
 	private Point getP1() {
@@ -33,6 +35,7 @@ public class Line extends Shape {
 
 	/**
 	 * Sets the first point of the line
+	 * 
 	 * @param p1 the first point of the line
 	 */
 	private void setP1(Point p1) {
@@ -41,6 +44,7 @@ public class Line extends Shape {
 
 	/**
 	 * Returns the second point of the line
+	 * 
 	 * @return the second point of the line
 	 */
 	private Point getP2() {
@@ -49,6 +53,7 @@ public class Line extends Shape {
 
 	/**
 	 * Sets the second point of the line
+	 * 
 	 * @param p2 the second point of the line
 	 */
 	private void setP2(Point p2) {
@@ -59,16 +64,13 @@ public class Line extends Shape {
 	 * Calculates the center of the line based on it's points
 	 */
 	private void calculateCenter() {
-		this.setCenter(
-			new Point(
-				((this.getP1().getX() + this.getP2().getX()) / 2),
-				((this.getP1().getY() + this.getP2().getY()) / 2)
-			)
-		);
+		this.setCenter(new Point(((this.getP1().getX() + this.getP2().getX()) / 2),
+				((this.getP1().getY() + this.getP2().getY()) / 2)));
 	}
 
 	/**
 	 * Returns a string describing the line
+	 * 
 	 * @return a string describing the line
 	 */
 	@Override
@@ -78,6 +80,7 @@ public class Line extends Shape {
 
 	/**
 	 * Checks of a point is inside the line
+	 * 
 	 * @param point the point
 	 * @return if the point is inside the line
 	 */
@@ -90,6 +93,7 @@ public class Line extends Shape {
 
 	/**
 	 * Moves the line
+	 * 
 	 * @param dx the horizontal move of the line
 	 * @param dy the vertical move of the line
 	 */

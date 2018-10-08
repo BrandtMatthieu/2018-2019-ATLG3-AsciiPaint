@@ -1,8 +1,8 @@
 package esi.atl.g44422.model;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import static java.lang.Float.parseFloat;
 
 /**
  * Represents a canvas in the Model
@@ -20,15 +20,17 @@ public class Canvas {
 
 	/**
 	 * Creates a naw canvas
-	 * @param sizeX the width of the new canvas
-	 * @param sizeY the height of the new canvas
+	 * 
+	 * @param sizeX      the width of the new canvas
+	 * @param sizeY      the height of the new canvas
 	 * @param background the background character of the canvas
-	 * @param grid if the canvas has a grid
-	 * @param border if the canvas has a border
-	 * @param id the id of the new canvas
+	 * @param grid       if the canvas has a grid
+	 * @param border     if the canvas has a border
+	 * @param id         the id of the new canvas
 	 * @throws IllegalArgumentException if the width or height of the new canvas is negative
 	 */
-	public Canvas(double sizeX, double sizeY, char background, boolean grid, boolean border, int id) throws IllegalArgumentException {
+	public Canvas(double sizeX, double sizeY, char background, boolean grid, boolean border, int id)
+			throws IllegalArgumentException {
 		this.setSizeX(sizeY);
 		this.setSizeY(sizeY);
 		this.setBackground(background);
@@ -39,18 +41,20 @@ public class Canvas {
 
 	/**
 	 * Returns the width of the canvas
+	 * 
 	 * @return the width of the canvas
 	 */
-	public double getSizeX() {
+	private double getSizeX() {
 		return sizeX;
 	}
 
 	/**
 	 * Sets a new width for the canvas
+	 * 
 	 * @param sizeX the width of the canvas
 	 * @throws IllegalArgumentException if the width is negative
 	 */
-	public void setSizeX(double sizeX) throws IllegalArgumentException {
+	private void setSizeX(double sizeX) throws IllegalArgumentException {
 		if (sizeX < 0) {
 			throw new IllegalArgumentException("The width of the canvas cannot be negative");
 		}
@@ -59,18 +63,20 @@ public class Canvas {
 
 	/**
 	 * Returns the height of the canvas
+	 * 
 	 * @return the height of the canvas
 	 */
-	public double getSizeY() {
+	private double getSizeY() {
 		return sizeY;
 	}
 
 	/**
 	 * Sets the height of the canvas
+	 * 
 	 * @param sizeY the height of the canvas
 	 * @throws IllegalArgumentException if the height is negative
 	 */
-	public void setSizeY(double sizeY) throws IllegalArgumentException {
+	private void setSizeY(double sizeY) throws IllegalArgumentException {
 		if (sizeY < 0) {
 			throw new IllegalArgumentException("The height of the canvas cannot be negative");
 		}
@@ -79,22 +85,25 @@ public class Canvas {
 
 	/**
 	 * Returns the background of the canvas
+	 * 
 	 * @return the background of the canvas
 	 */
-	public char getBackground() {
+	private char getBackground() {
 		return background;
 	}
 
 	/**
 	 * Sets the background of the canvas
+	 * 
 	 * @param background the background of the canvas
 	 */
-	public void setBackground(char background) {
+	private void setBackground(char background) {
 		this.background = background;
 	}
 
 	/**
 	 * Returns the id of the canvas
+	 * 
 	 * @return the id of the canvas
 	 */
 	public int getId() {
@@ -103,10 +112,11 @@ public class Canvas {
 
 	/**
 	 * Sets the id of the canvas
+	 * 
 	 * @param id the id of the canvas
 	 * @throws IllegalArgumentException if the id is negative
 	 */
-	public void setId(int id) throws IllegalArgumentException {
+	private void setId(int id) throws IllegalArgumentException {
 		if (id < 0) {
 			throw new IllegalArgumentException("The id cannot be negative");
 		}
@@ -115,6 +125,7 @@ public class Canvas {
 
 	/**
 	 * Returns if the canvas has a grid
+	 * 
 	 * @return if the canvas has a grid
 	 */
 	public boolean isGrid() {
@@ -123,14 +134,16 @@ public class Canvas {
 
 	/**
 	 * Sets the grid for the canvas
+	 * 
 	 * @param grid the grid for the canvas
 	 */
-	public void setGrid(boolean grid) {
+	private void setGrid(boolean grid) {
 		this.grid = grid;
 	}
 
 	/**
 	 * Returns if the canvas has a border
+	 * 
 	 * @return if the canvas has a border
 	 */
 	public boolean isBorder() {
@@ -139,30 +152,34 @@ public class Canvas {
 
 	/**
 	 * Sets the border for the canvas
+	 * 
 	 * @param border the border for the canvas
 	 */
-	public void setBorder(boolean border) {
+	private void setBorder(boolean border) {
 		this.border = border;
 	}
 
 	/**
 	 * Returns a list with all shapes of the canvas
+	 * 
 	 * @return a list with all shapes of the canvas
 	 */
-	public ArrayList<Shape> getShapes() {
+	private ArrayList<Shape> getShapes() {
 		return shapes;
 	}
 
 	/**
 	 * Sets the list of all shapes of the canvas
+	 * 
 	 * @param shapes the list of all shapes of the canvas
 	 */
-	public void setShapes(ArrayList<Shape> shapes) {
+	private void setShapes(ArrayList<Shape> shapes) {
 		this.shapes = shapes;
 	}
 
 	/**
 	 * Returns the biggest id created
+	 * 
 	 * @return the biggest id created
 	 */
 	public int getShapeIdCount() {
@@ -171,6 +188,7 @@ public class Canvas {
 
 	/**
 	 * Sets the biggest id created
+	 * 
 	 * @param shapeIdCount the biggest id created
 	 * @throws IllegalArgumentException if the id is negative
 	 */
@@ -183,14 +201,16 @@ public class Canvas {
 
 	/**
 	 * Returns the history of all actions done on the canvas
+	 * 
 	 * @return the history of all actions done on the canvas
 	 */
-	public ArrayList<String> getHistory() {
-		return history;
+	private ArrayList<String> getHistory() {
+		return this.history;
 	}
 
 	/**
 	 * Sets the history of all actions done on the canvas
+	 * 
 	 * @param history the history of all actions done on the canvas
 	 */
 	public void setHistory(ArrayList<String> history) {
@@ -199,19 +219,22 @@ public class Canvas {
 
 	/**
 	 * Returns a string describing the canvas
+	 * 
 	 * @return a string describing the canvas
 	 */
 	@Override
 	public String toString() {
-		return "Canvas | Id: " + this.getId() + " Shape count: " + this.getShapes().size() + " Size X: " + this.getSizeX() + " Size Y: " + this.getSizeY() + " Background: " + this.getBackground();
+		return "Canvas | Id: " + this.getId() + " Shape count: " + this.getShapes().size() + " Size X: "
+				+ this.getSizeX() + " Size Y: " + this.getSizeY() + " Background: " + this.getBackground();
 	}
 
 	/**
 	 * Returns if the canvas has a shape that match with the provided id
+	 * 
 	 * @param id the id of a shape
 	 * @return if the canvas has a shape that match with the provided id
 	 */
-	public boolean hasShapeWithId(int id) {
+	private boolean hasShapeWithId(int id) {
 		for (Shape shape : this.getShapes()) {
 			if (shape.getId() == id) {
 				return true;
@@ -222,9 +245,10 @@ public class Canvas {
 
 	/**
 	 * Returns the shape that matches with the provided shape id
+	 * 
 	 * @param id the id of a shape
 	 * @return the shape that matches with the provided shape id
-	 * @throws IllegalArgumentException if no shape mathes the id
+	 * @throws IllegalArgumentException if no shape matches the id
 	 */
 	public Shape getShapeWithId(int id) throws IllegalArgumentException {
 		if (hasShapeWithId(id)) {
@@ -239,9 +263,10 @@ public class Canvas {
 
 	/**
 	 * Returns the index of the shapes in the list of shapes for the shape with the provided id
+	 * 
 	 * @param id the id of a shape
 	 * @return the index of the shapes in the list of shapes for the shape with the provided id
-	 * @throws IllegalArgumentException if no shape mathes the id
+	 * @throws IllegalArgumentException if no shape matches the id
 	 */
 	public int getIndexOfShapeWithId(int id) throws IllegalArgumentException {
 		if (hasShapeWithId(id)) {
@@ -256,12 +281,13 @@ public class Canvas {
 
 	/**
 	 * Returns a string describing all the shapes of the canvas
+	 * 
 	 * @return a string describing all the shapes of the canvas
 	 */
 	public String listShapes() {
 		String str;
 		if (this.getShapes().size() == 0) {
-			str =  "There are no shapes in this canvas";
+			str = "There are no shapes in this canvas";
 		} else {
 			str = "List of shapes for canvas id: " + this.getId();
 			for (Shape shape : this.getShapes()) {
@@ -273,16 +299,17 @@ public class Canvas {
 
 	/**
 	 * Returns a string describing all the operation in this canvas
+	 * 
 	 * @return a string describing all the operation in this canvas
 	 */
 	public String listHistory() {
 		String str;
-		if(this.getHistory().size() == 0) {
+		if (this.getHistory().size() == 0) {
 			str = "No history for this canvas.";
 		} else {
 			str = "History for canvas id: " + this.getId();
-			for(String history : this.getHistory()) {
-				str += "\n\t" + history.toString();
+			for (String history : this.getHistory()) {
+				str += "\n\t" + history;
 			}
 		}
 		return str;
@@ -290,33 +317,121 @@ public class Canvas {
 
 	/**
 	 * Adds a shape to the list of shapes of this canvas
+	 * 
 	 * @param args the arguments provided to create the shape
 	 * @throws IllegalArgumentException if the provided argument doesn't match with any known shape
 	 */
 	public void addShape(String[] args) throws IllegalArgumentException {
-		if(ShapeType.values()  args[1].substring(0, 1).toUpperCase() + args[1].substring(1).toLowerCase()) { // TODO
-
-		}
 		switch (args[1].toLowerCase()) {
 		case "ellipse":
+			if (this.hasGoodNumberOfArguments(6, 8, args)) {
+				this.shapes.add(
+					new Ellipse(
+						parseFloat(args[4]),
+						parseFloat(args[5]),
+						new Point(parseFloat(args[2]), parseFloat(args[3])),
+						ShapeType.Ellipse,
+						args[6].charAt(0),
+						args[7].charAt(0),
+						this.shapeIdCount
+					)
+				);
+			}
 			break;
 		case "circle":
+			if (this.hasGoodNumberOfArguments(5, 7, args)) {
+				this.shapes.add(
+					new Ellipse(
+						parseFloat(args[4]),
+						parseFloat(args[4]),
+						new Point(
+							parseFloat(args[2]),
+							parseFloat(args[3])),
+						ShapeType.Circle,
+						args[5].charAt(0),
+						args[6].charAt(0),
+						this.shapeIdCount
+					)
+				);
+			}
 			break;
 		case "rectangle":
+			if (this.hasGoodNumberOfArguments(6, 8, args)) {
+				this.shapes.add(
+					new Rectangle(
+						parseFloat(args[4]),
+						parseFloat(args[5]),
+						new Point(
+							parseFloat(args[2]),
+							parseFloat(args[3])),
+						ShapeType.Rectangle,
+						args[6].charAt(0),
+						args[7].charAt(0), this.shapeIdCount
+					)
+				);
+			}
 			break;
 		case "square":
+			if (this.hasGoodNumberOfArguments(5, 7, args)) {
+				this.shapes.add(
+					new Rectangle(
+						parseFloat(args[4]),
+						parseFloat(args[5]),
+						new Point(
+							parseFloat(args[2]),
+							parseFloat(args[3])),
+						ShapeType.Square,
+						args[6].charAt(0),
+						args[7].charAt(0),
+						this.shapeIdCount
+					)
+				);
+			}
 			break;
 		case "line":
+			if (this.hasGoodNumberOfArguments(6, 8, args)) {
+				this.shapes.add(
+					new Line(
+						new Point(
+							parseFloat(args[2]),
+							parseFloat(args[3])),
+						new Point(
+							parseFloat(args[4]),
+							parseFloat(args[5])),
+							ShapeType.Line,
+						args[6].charAt(0),
+						args[7].charAt(0),
+						this.shapeIdCount
+					)
+				);
+			}
 			break;
 		case "point":
+			if (this.hasGoodNumberOfArguments(4, 6, args)) {
+				this.shapes.add(
+					new Point(
+						parseFloat(args[2]),
+						parseFloat(args[3]),
+						new Point(
+							parseFloat(args[2]),
+							parseFloat(args[3])),
+						ShapeType.Point,
+						args[4].charAt(0),
+						args[5].charAt(0),
+						this.shapeIdCount
+					)
+				);
+			}
 			break;
 		default:
 			throw new IllegalArgumentException("Unknown shape");
 		}
+		this.shapeIdCount++;
 	}
 
 	/**
 	 * Removes the shape that matches the provided id
+	 * 
 	 * @param id the id of the shape to remove
 	 * @throws IllegalArgumentException if the provided argument doesn't match with any known shape
 	 */
@@ -330,6 +445,7 @@ public class Canvas {
 
 	/**
 	 * Adds a command to the canvas's history
+	 * 
 	 * @param args the args that mad the command
 	 */
 	public void addToHistory(String args) {
@@ -337,13 +453,23 @@ public class Canvas {
 	}
 
 	/**
+	 * Adds a command to the canvas's history
+	 *
+	 * @param args the args that mad the command
+	 */
+	public void addToHistory(ArrayList<String> args) {
+		this.history.add(String.join(" ", args));
+	}
+
+	/**
 	 * Renders the canvas
+	 * 
 	 * @return the rendered canvas
 	 */
 	public ArrayList<ArrayList<Pixel>> render() {
-		ArrayList<ArrayList<Pixel>> canvas = new ArrayList<ArrayList<Pixel>>();
+		ArrayList<ArrayList<Pixel>> canvas = new ArrayList<>();
 		for (int j = 1; j < this.getSizeY() + 1; j++) {
-			canvas.add(new ArrayList<Pixel>());
+			canvas.add(new ArrayList<>());
 			for (int i = 1; i < this.getSizeX() + 1; i++) {
 				canvas.get(j - 1).add(new Pixel(this.getBackground()));
 				for (Shape shape : this.getShapes()) {
@@ -360,11 +486,12 @@ public class Canvas {
 	 * Removes all the shapes from the canvas
 	 */
 	public void clearShapes() {
-		this.setShapes(new ArrayList<Shape>());
+		this.setShapes(new ArrayList<>());
 	}
 
 	/**
 	 * Moves the shape that matches the provided id
+	 * 
 	 * @param dx the horizontal move
 	 * @param dy the vertical move
 	 * @param id the id of the shape to move
@@ -380,6 +507,7 @@ public class Canvas {
 
 	/**
 	 * Moves the shape corresponding to the id one layer up
+	 * 
 	 * @param id the id of the corresponding shape
 	 * @throws IllegalArgumentException if the id doesn't matches any shape
 	 */
@@ -395,6 +523,7 @@ public class Canvas {
 
 	/**
 	 * Moves the shape corresponding to the id one layer down
+	 * 
 	 * @param id the id of the corresponding shape
 	 * @throws IllegalArgumentException if the id doesn't matches any shape
 	 */
@@ -410,6 +539,7 @@ public class Canvas {
 
 	/**
 	 * Moves the shape corresponding to the id to the first layer
+	 * 
 	 * @param id the id of the corresponding shape
 	 * @throws IllegalArgumentException if the id doesn't matches any shape
 	 */
@@ -427,6 +557,7 @@ public class Canvas {
 
 	/**
 	 * Moves the shape corresponding to the id to the last layer
+	 * 
 	 * @param id the id of the corresponding shape
 	 * @throws IllegalArgumentException if the id doesn't matches any shape
 	 */
@@ -440,5 +571,17 @@ public class Canvas {
 			}
 		}
 		throw new IllegalArgumentException("No shape matches this id in this canvas");
+	}
+
+	/**
+	 * Checks if the command as an array of words has the right number of parameters
+	 *
+	 * @param min  the minimum number of arguments accepted
+	 * @param max  the maximum number of arguments accepted
+	 * @param args the command as an array of words from the command line
+	 * @return true if the command has the good number of arguments
+	 */
+	private boolean hasGoodNumberOfArguments(int min, int max, String[] args) {
+		return (args.length - 1) >= min && (args.length - 1) <= max;
 	}
 }

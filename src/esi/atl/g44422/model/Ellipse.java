@@ -9,16 +9,18 @@ public class Ellipse extends Shape {
 
 	/**
 	 * Creates a new ellipse or circle
+	 * 
 	 * @param radiusX the horizontal radius of the ellipse/circle
 	 * @param radiusY the vertical radius of the ellipse/circle
-	 * @param center the center of the ellipse/circle
-	 * @param type the type of the shape (ellipse/circle)
-	 * @param fill the fill of the ellipse/circle
+	 * @param center  the center of the ellipse/circle
+	 * @param type    the type of the shape (ellipse/circle)
+	 * @param fill    the fill of the ellipse/circle
 	 * @param outline the outline of the ellipse/circle
-	 * @param id the id of the ellipse/circle
+	 * @param id      the id of the ellipse/circle
 	 * @throws IllegalArgumentException if any provided arguments is wrong
 	 */
-	public Ellipse(double radiusX, double radiusY, Point center, ShapeType type, char fill, char outline, int id) throws IllegalArgumentException {
+	public Ellipse(double radiusX, double radiusY, Point center, ShapeType type, char fill, char outline, int id)
+			throws IllegalArgumentException {
 		super(center, null, fill, outline, id);
 		if (type == ShapeType.Ellipse) {
 			super.setType(ShapeType.Ellipse);
@@ -33,6 +35,7 @@ public class Ellipse extends Shape {
 
 	/**
 	 * Returns the horizontal radius of the ellipse/circle
+	 * 
 	 * @return the horizontal radius of the ellipse/circle
 	 */
 	private double getRadiusX() {
@@ -41,6 +44,7 @@ public class Ellipse extends Shape {
 
 	/**
 	 * Sets the horizontal radius of the ellipse/circle
+	 * 
 	 * @param radiusX the horizontal radius of the ellipse/circle
 	 * @throws IllegalArgumentException if the radius is negative
 	 */
@@ -53,6 +57,7 @@ public class Ellipse extends Shape {
 
 	/**
 	 * Returns the vertical radius of the ellipse/circle
+	 * 
 	 * @return the vertical radius of the ellipse/circle
 	 */
 	private double getRadiusY() {
@@ -61,6 +66,7 @@ public class Ellipse extends Shape {
 
 	/**
 	 * Sets the vertical radius of the ellipse/circle
+	 * 
 	 * @param radiusY the vertical radius of the ellipse/circle
 	 * @throws IllegalArgumentException if the radius is negative
 	 */
@@ -73,6 +79,7 @@ public class Ellipse extends Shape {
 
 	/**
 	 * A string representing the shape
+	 * 
 	 * @return a string representing the shape
 	 */
 	@Override
@@ -89,12 +96,14 @@ public class Ellipse extends Shape {
 
 	/**
 	 * Checks if a point is inside the ellipse/circle
+	 * 
 	 * @param p the point
 	 * @return if the point is inside the ellipse/circle
 	 */
 	@Override
 	public boolean isInside(Point p) {
-		return (Math.pow((p.getX() - this.getCenter().getX()), 2) * Math.pow(this.getRadiusX(), 2)) + ((Math.pow((p.getY() - this.getCenter().getY()), 2)) * (Math.pow(this.getRadiusY(), 2)))
-				<= (Math.pow(this.getRadiusX(), 2) * Math.pow(this.getRadiusY(), 2));
+		return (Math.pow((p.getX() - this.getCenter().getX()), 2) * Math.pow(this.getRadiusX(), 2))
+				+ ((Math.pow((p.getY() - this.getCenter().getY()), 2)) * (Math.pow(this.getRadiusY(), 2))) <= (Math
+						.pow(this.getRadiusX(), 2) * Math.pow(this.getRadiusY(), 2));
 	}
 }

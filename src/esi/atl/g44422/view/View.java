@@ -3,8 +3,7 @@ package esi.atl.g44422.view;
 import java.util.Scanner;
 
 /**
- * View part of the MVC model
- * Controls what displays the program
+ * View part of the MVC model Controls what displays the program
  */
 public class View {
 
@@ -19,6 +18,7 @@ public class View {
 
 	/**
 	 * Returns the scanner used in the program
+	 * 
 	 * @return the scanner used in the program
 	 */
 	public Scanner getSc() {
@@ -27,6 +27,7 @@ public class View {
 
 	/**
 	 * Sets a new scanner for the program
+	 * 
 	 * @param sc a new scanner for the program
 	 */
 	private void setSc(Scanner sc) {
@@ -45,14 +46,13 @@ public class View {
 	 * Displays the logo when the program starts
 	 */
 	public void displayLogo() {
-		System.out.println("" +
-			"                    _ _ _____      _       _   \n" +
-			"     /\\            (_|_)  __ \\    (_)     | |  \n" +
-			"    /  \\   ___  ___ _ _| |__) |_ _ _ _ __ | |_ \n" +
-			"   / /\\ \\ / __|/ __| | |  ___/ _` | | '_ \\| __|\n" +
-			"  / ____ \\\\__ \\ (__| | | |  | (_| | | | | | |_ \n" +
-			" /_/    \\_\\___/\\___|_|_|_|   \\__,_|_|_| |_|\\__|\n" +
-			"                                               \n");
+		System.out.println("" + "                    _ _ _____      _       _   \n"
+				+ "     /\\            (_|_)  __ \\    (_)     | |  \n"
+				+ "    /  \\   ___  ___ _ _| |__) |_ _ _ _ __ | |_ \n"
+				+ "   / /\\ \\ / __|/ __| | |  ___/ _` | | '_ \\| __|\n"
+				+ "  / ____ \\\\__ \\ (__| | | |  | (_| | | | | | |_ \n"
+				+ " /_/    \\_\\___/\\___|_|_|_|   \\__,_|_|_| |_|\\__|\n"
+				+ "                                               \n");
 	}
 
 	/**
@@ -78,6 +78,7 @@ public class View {
 
 	/**
 	 * Displays something on the screen
+	 * 
 	 * @param str the string to print
 	 */
 	public void display(String str) {

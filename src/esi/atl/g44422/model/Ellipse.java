@@ -35,7 +35,7 @@ public class Ellipse extends Shape {
 	 * Returns the horizontal radius of the ellipse/circle
 	 * @return the horizontal radius of the ellipse/circle
 	 */
-	public double getRadiusX() {
+	private double getRadiusX() {
 		return radiusX;
 	}
 
@@ -44,7 +44,7 @@ public class Ellipse extends Shape {
 	 * @param radiusX the horizontal radius of the ellipse/circle
 	 * @throws IllegalArgumentException if the radius is negative
 	 */
-	public void setRadiusX(double radiusX) throws IllegalArgumentException {
+	private void setRadiusX(double radiusX) throws IllegalArgumentException {
 		if (radiusX < 0.0) {
 			throw new IllegalArgumentException();
 		}
@@ -55,7 +55,7 @@ public class Ellipse extends Shape {
 	 * Returns the vertical radius of the ellipse/circle
 	 * @return the vertical radius of the ellipse/circle
 	 */
-	public double getRadiusY() {
+	private double getRadiusY() {
 		return radiusY;
 	}
 
@@ -64,7 +64,7 @@ public class Ellipse extends Shape {
 	 * @param radiusY the vertical radius of the ellipse/circle
 	 * @throws IllegalArgumentException if the radius is negative
 	 */
-	public void setRadiusY(double radiusY) throws IllegalArgumentException {
+	private void setRadiusY(double radiusY) throws IllegalArgumentException {
 		if (radiusY < 0.0) {
 			throw new IllegalArgumentException();
 		}

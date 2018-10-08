@@ -19,7 +19,7 @@ public abstract class Shape {
 	 * @param id the id of the shape
 	 * @throws IllegalArgumentException if one of the parameter is wrong
 	 */
-	public Shape(Point center, ShapeType type, char fill, char outline, int id) throws IllegalArgumentException {
+	Shape(Point center, ShapeType type, char fill, char outline, int id) throws IllegalArgumentException {
 		this.setCenter(center);
 		this.setType(type);
 		this.setFill(fill);
@@ -30,14 +30,14 @@ public abstract class Shape {
 	/**
 	 * Creates an empty shape
 	 */
-	public Shape() {
+	Shape() {
 	}
 
 	/**
 	 * Returns the center of the shape
 	 * @return the center of the shape
 	 */
-	public Point getCenter() {
+	Point getCenter() {
 		return center;
 	}
 
@@ -45,7 +45,7 @@ public abstract class Shape {
 	 * Sets the center of the shape
 	 * @param center the center of the shape
 	 */
-	public void setCenter(Point center) {
+	void setCenter(Point center) {
 		this.center = center;
 	}
 
@@ -53,7 +53,7 @@ public abstract class Shape {
 	 * Returns the type of the shape
 	 * @return the type of the shape
 	 */
-	public ShapeType getType() {
+	ShapeType getType() {
 		return type;
 	}
 
@@ -61,7 +61,7 @@ public abstract class Shape {
 	 * Sets the type of the shape
 	 * @param type the type of the shape
 	 */
-	public void setType(ShapeType type) {
+	void setType(ShapeType type) {
 		this.type = type;
 	}
 
@@ -77,7 +77,7 @@ public abstract class Shape {
 	 * Sets the fill of the shape
 	 * @param fill the fill of the shape
 	 */
-	public void setFill(char fill) {
+	private void setFill(char fill) {
 		this.fill = fill;
 	}
 
@@ -85,7 +85,7 @@ public abstract class Shape {
 	 * Returns the outline of the shape
 	 * @return the outline of the shape
 	 */
-	public char getOutline() {
+	private char getOutline() {
 		return outline;
 	}
 
@@ -93,7 +93,7 @@ public abstract class Shape {
 	 * Sets the outline of the shape
 	 * @param outline the outline of the shape
 	 */
-	public void setOutline(char outline) {
+	private void setOutline(char outline) {
 		this.outline = outline;
 	}
 
@@ -110,7 +110,7 @@ public abstract class Shape {
 	 * @param id the id of the shape
 	 * @throws IllegalArgumentException if the id is negative
 	 */
-	public void setId(int id) throws IllegalArgumentException {
+	private void setId(int id) throws IllegalArgumentException {
 		if (id < 0) {
 			throw new IllegalArgumentException();
 		}

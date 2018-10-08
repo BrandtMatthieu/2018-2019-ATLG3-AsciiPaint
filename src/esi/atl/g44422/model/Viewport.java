@@ -34,7 +34,7 @@ public class Viewport {
 	 * Returns the canvas of the viewport
 	 * @return the canvas of the viewport
 	 */
-	public ArrayList<Canvas> getCanvases() {
+	private ArrayList<Canvas> getCanvases() {
 		return canvases;
 	}
 
@@ -42,7 +42,7 @@ public class Viewport {
 	 * Sets the canvas of the viewport
 	 * @param canvases the canvas of the viewport
 	 */
-	public void setCanvases(ArrayList<Canvas> canvases) {
+	private void setCanvases(ArrayList<Canvas> canvases) {
 		this.canvases = canvases;
 	}
 
@@ -70,7 +70,7 @@ public class Viewport {
 	 * Returns the biggest canvas id
 	 * @return the biggest canvas id
 	 */
-	public int getCanvasIdCount() {
+	private int getCanvasIdCount() {
 		return canvasIdCount;
 	}
 
@@ -79,7 +79,7 @@ public class Viewport {
 	 * @param canvasIdCount the biggest canvas id
 	 * @throws IllegalArgumentException if the id is wrong
 	 */
-	public void setCanvasIdCount(int canvasIdCount) throws IllegalArgumentException {
+	private void setCanvasIdCount(int canvasIdCount) throws IllegalArgumentException {
 		if (canvasIdCount < 0) {
 			throw new IllegalArgumentException();
 		}
@@ -99,7 +99,7 @@ public class Viewport {
 	 * @param canvasDefaultSizeX the default width of the canvas
 	 * @throws IllegalArgumentException if the width is negative
 	 */
-	public void setCanvasDefaultSizeX(double canvasDefaultSizeX) throws IllegalArgumentException {
+	private void setCanvasDefaultSizeX(double canvasDefaultSizeX) throws IllegalArgumentException {
 		if (canvasDefaultSizeX < 0) {
 			throw new IllegalArgumentException();
 		}
@@ -119,7 +119,7 @@ public class Viewport {
 	 * @param canvasDefaultSizeY the default height of the canvas
 	 * @throws IllegalArgumentException if the height is negative
 	 */
-	public void setCanvasDefaultSizeY(double canvasDefaultSizeY) throws IllegalArgumentException {
+	private void setCanvasDefaultSizeY(double canvasDefaultSizeY) throws IllegalArgumentException {
 		if (canvasDefaultSizeY < 0) {
 			throw new IllegalArgumentException();
 		}
@@ -138,7 +138,7 @@ public class Viewport {
 	 * Sets the default background of the canvas
 	 * @param canvasDefaultBackground the default background of the canvas
 	 */
-	public void setCanvasDefaultBackground(char canvasDefaultBackground) {
+	private void setCanvasDefaultBackground(char canvasDefaultBackground) {
 		this.canvasDefaultBackground = canvasDefaultBackground;
 	}
 
@@ -154,7 +154,7 @@ public class Viewport {
 	 * Sets if the canvas has a grid
 	 * @param canvasDefaultGrid if the canvas has a grid
 	 */
-	public void setCanvasDefaultGrid(boolean canvasDefaultGrid) {
+	private void setCanvasDefaultGrid(boolean canvasDefaultGrid) {
 		this.canvasDefaultGrid = canvasDefaultGrid;
 	}
 
@@ -170,7 +170,7 @@ public class Viewport {
 	 * Sets if the canvas has a border
 	 * @param canvasDefaultBorder if the canvas has a border
 	 */
-	public void setCanvasDefaultBorder(boolean canvasDefaultBorder) {
+	private void setCanvasDefaultBorder(boolean canvasDefaultBorder) {
 		this.canvasDefaultBorder = canvasDefaultBorder;
 	}
 
@@ -229,7 +229,7 @@ public class Viewport {
 	 * @param id the id of the canvas
 	 * @return if a canvas has the provided id
 	 */
-	public boolean hasCanvasWithId(int id) {
+	private boolean hasCanvasWithId(int id) {
 		for(Canvas canvas : this.getCanvases()) {
 			if(canvas.getId() == id) {
 				return true;

@@ -34,7 +34,7 @@ public class Rectangle extends Shape {
 	 * Returns the width of the rectangle
 	 * @return the width of the rectangle
 	 */
-	public double getWidth() {
+	private double getWidth() {
 		return width;
 	}
 
@@ -43,7 +43,7 @@ public class Rectangle extends Shape {
 	 * @param width the width of the rectangle
 	 * @throws IllegalArgumentException if the width id negative
 	 */
-	public void setWidth(double width) throws IllegalArgumentException {
+	private void setWidth(double width) throws IllegalArgumentException {
 		if (width < 0) {
 			throw new IllegalArgumentException();
 		}
@@ -54,7 +54,7 @@ public class Rectangle extends Shape {
 	 * Returns the height of the rectangle
 	 * @return the height of the rectangle
 	 */
-	public double getHeight() {
+	private double getHeight() {
 		return height;
 	}
 
@@ -63,7 +63,7 @@ public class Rectangle extends Shape {
 	 * @param height the height of the rectangle
 	 * @throws IllegalArgumentException if the height of the rectangle is negative
 	 */
-	public void setHeight(double height) throws IllegalArgumentException {
+	private void setHeight(double height) throws IllegalArgumentException {
 		if (height < 0) {
 			throw new IllegalArgumentException();
 		}

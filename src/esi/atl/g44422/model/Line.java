@@ -27,7 +27,7 @@ public class Line extends Shape {
 	 * Returns the first point of the line
 	 * @return the first point of the line
 	 */
-	public Point getP1() {
+	private Point getP1() {
 		return p1;
 	}
 
@@ -35,7 +35,7 @@ public class Line extends Shape {
 	 * Sets the first point of the line
 	 * @param p1 the first point of the line
 	 */
-	public void setP1(Point p1) {
+	private void setP1(Point p1) {
 		this.p1 = p1;
 	}
 
@@ -43,7 +43,7 @@ public class Line extends Shape {
 	 * Returns the second point of the line
 	 * @return the second point of the line
 	 */
-	public Point getP2() {
+	private Point getP2() {
 		return p2;
 	}
 
@@ -51,14 +51,14 @@ public class Line extends Shape {
 	 * Sets the second point of the line
 	 * @param p2 the second point of the line
 	 */
-	public void setP2(Point p2) {
+	private void setP2(Point p2) {
 		this.p2 = p2;
 	}
 
 	/**
 	 * Calculates the center of the line based on it's points
 	 */
-	public void calculateCenter() {
+	private void calculateCenter() {
 		this.setCenter(
 			new Point(
 				((this.getP1().getX() + this.getP2().getX()) / 2),

@@ -26,10 +26,10 @@ public class View {
 	}
 
 	/**
-	 * Sest a new scanner for the program
+	 * Sets a new scanner for the program
 	 * @param sc a new scanner for the program
 	 */
-	public void setSc(Scanner sc) {
+	private void setSc(Scanner sc) {
 		this.sc = sc;
 	}
 

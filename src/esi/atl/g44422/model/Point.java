@@ -44,7 +44,7 @@ public class Point extends Shape {
 	 * Sets the horizontal position of the point
 	 * @param x the horizontal position of the point
 	 */
-	public void setX(double x) {
+	private void setX(double x) {
 		this.x = x;
 	}
 
@@ -60,7 +60,7 @@ public class Point extends Shape {
 	 * Sets the vertical position of the point
 	 * @param y the vertical position of the point
 	 */
-	public void setY(double y) {
+	private void setY(double y) {
 		this.y = y;
 	}
 

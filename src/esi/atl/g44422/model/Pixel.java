@@ -3,7 +3,7 @@ package esi.atl.g44422.model;
 /**
  * Represents a pixel in the model
  */
-public class Pixel {
+class Pixel {
 	private char value;
 
 	/**
@@ -16,15 +16,15 @@ public class Pixel {
 
 	/**
 	 * Returns the value of this pixel
-	 * @return
+	 * @return the value of this pixel
 	 */
-	public char getValue() {
+	private char getValue() {
 		return value;
 	}
 
 	/**
 	 * Sets the value of this pixel
-	 * @param value
+	 * @param value the value of this pixel
 	 */
 	public void setValue(char value) {
 		this.value = value;
@@ -32,7 +32,7 @@ public class Pixel {
 
 	/**
 	 * Returns a string representing the pixel
-	 * @return
+	 * @return a string representing the pixel
 	 */
 	@Override
 	public String toString() {

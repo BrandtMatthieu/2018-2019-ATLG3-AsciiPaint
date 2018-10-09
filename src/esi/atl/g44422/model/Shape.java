@@ -12,7 +12,7 @@ public abstract class Shape {
 
 	/**
 	 * Creates a new shape
-	 * 
+	 *
 	 * @param center  the center of the shape
 	 * @param type    the type of the shape
 	 * @param fill    the fill of the shape
@@ -36,7 +36,7 @@ public abstract class Shape {
 
 	/**
 	 * Returns the center of the shape
-	 * 
+	 *
 	 * @return the center of the shape
 	 */
 	Point getCenter() {
@@ -45,7 +45,7 @@ public abstract class Shape {
 
 	/**
 	 * Sets the center of the shape
-	 * 
+	 *
 	 * @param center the center of the shape
 	 */
 	void setCenter(Point center) {
@@ -54,7 +54,7 @@ public abstract class Shape {
 
 	/**
 	 * Returns the type of the shape
-	 * 
+	 *
 	 * @return the type of the shape
 	 */
 	ShapeType getType() {
@@ -63,7 +63,7 @@ public abstract class Shape {
 
 	/**
 	 * Sets the type of the shape
-	 * 
+	 *
 	 * @param type the type of the shape
 	 */
 	void setType(ShapeType type) {
@@ -72,7 +72,7 @@ public abstract class Shape {
 
 	/**
 	 * Returns the fill of the shape
-	 * 
+	 *
 	 * @return the fill of the shape
 	 */
 	public char getFill() {
@@ -81,7 +81,7 @@ public abstract class Shape {
 
 	/**
 	 * Sets the fill of the shape
-	 * 
+	 *
 	 * @param fill the fill of the shape
 	 */
 	public void setFill(char fill) {
@@ -90,7 +90,7 @@ public abstract class Shape {
 
 	/**
 	 * Returns the outline of the shape
-	 * 
+	 *
 	 * @return the outline of the shape
 	 */
 	public char getOutline() {
@@ -99,7 +99,7 @@ public abstract class Shape {
 
 	/**
 	 * Sets the outline of the shape
-	 * 
+	 *
 	 * @param outline the outline of the shape
 	 */
 	public void setOutline(char outline) {
@@ -108,7 +108,7 @@ public abstract class Shape {
 
 	/**
 	 * Returns the outline of the shape
-	 * 
+	 *
 	 * @return the outline of the shape
 	 */
 	public int getId() {
@@ -117,7 +117,7 @@ public abstract class Shape {
 
 	/**
 	 * Sets the id of the shape
-	 * 
+	 *
 	 * @param id the id of the shape
 	 * @throws IllegalArgumentException if the id is negative
 	 */
@@ -130,7 +130,7 @@ public abstract class Shape {
 
 	/**
 	 * Returns a string representing the shape
-	 * 
+	 *
 	 * @return a string representing the shape
 	 */
 	@Override
@@ -141,7 +141,7 @@ public abstract class Shape {
 
 	/**
 	 * Checks if a point is inside the shape
-	 * 
+	 *
 	 * @param p the point
 	 * @return if the point is inside the shape
 	 */
@@ -151,7 +151,7 @@ public abstract class Shape {
 
 	/**
 	 * Moves the shape
-	 * 
+	 *
 	 * @param dx the horizontal move of the shape
 	 * @param dy the vertical move of the shape
 	 */

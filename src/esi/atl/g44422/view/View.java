@@ -18,7 +18,7 @@ public class View {
 
 	/**
 	 * Returns the scanner used in the program
-	 * 
+	 *
 	 * @return the scanner used in the program
 	 */
 	public Scanner getSc() {
@@ -27,7 +27,7 @@ public class View {
 
 	/**
 	 * Sets a new scanner for the program
-	 * 
+	 *
 	 * @param sc a new scanner for the program
 	 */
 	private void setSc(Scanner sc) {
@@ -38,15 +38,17 @@ public class View {
 	 * Clears the screen
 	 */
 	public void clearScreen() {
-		System.out.print("\033[H\033[2J");
+		System.out.print("\033");
 		System.out.flush();
+		System.out.print("\033\143\n");
 	}
 
 	/**
 	 * Displays the logo when the program starts
 	 */
 	public void displayLogo() {
-		System.out.println("" + "                    _ _ _____      _       _   \n"
+		System.out.println(""
+				+ "                    _ _ _____      _       _   \n"
 				+ "     /\\            (_|_)  __ \\    (_)     | |  \n"
 				+ "    /  \\   ___  ___ _ _| |__) |_ _ _ _ __ | |_ \n"
 				+ "   / /\\ \\ / __|/ __| | |  ___/ _` | | '_ \\| __|\n"
@@ -59,7 +61,7 @@ public class View {
 	 * Displays a welcome message
 	 */
 	public void displayWelcome() {
-		System.out.println("Welcome in AsciiPaint.\nType \"help\" to get a list with all commands.");
+		System.out.println("Welcome in AsciiPaint.\nType \"help\" to get a list with all commands.\n\n");
 	}
 
 	/**
@@ -78,7 +80,7 @@ public class View {
 
 	/**
 	 * Displays something on the screen
-	 * 
+	 *
 	 * @param str the string to print
 	 */
 	public void display(String str) {

@@ -9,7 +9,7 @@ public class Line extends Shape {
 
 	/**
 	 * Creates a new line
-	 * 
+	 *
 	 * @param p1      the first point of the line
 	 * @param p2      the second point of the line
 	 * @param type    the type of the shape (line)
@@ -26,7 +26,7 @@ public class Line extends Shape {
 
 	/**
 	 * Returns the first point of the line
-	 * 
+	 *
 	 * @return the first point of the line
 	 */
 	private Point getP1() {
@@ -35,7 +35,7 @@ public class Line extends Shape {
 
 	/**
 	 * Sets the first point of the line
-	 * 
+	 *
 	 * @param p1 the first point of the line
 	 */
 	private void setP1(Point p1) {
@@ -44,7 +44,7 @@ public class Line extends Shape {
 
 	/**
 	 * Returns the second point of the line
-	 * 
+	 *
 	 * @return the second point of the line
 	 */
 	private Point getP2() {
@@ -53,7 +53,7 @@ public class Line extends Shape {
 
 	/**
 	 * Sets the second point of the line
-	 * 
+	 *
 	 * @param p2 the second point of the line
 	 */
 	private void setP2(Point p2) {
@@ -70,7 +70,7 @@ public class Line extends Shape {
 
 	/**
 	 * Returns a string describing the line
-	 * 
+	 *
 	 * @return a string describing the line
 	 */
 	@Override
@@ -80,7 +80,7 @@ public class Line extends Shape {
 
 	/**
 	 * Checks of a point is inside the line
-	 * 
+	 *
 	 * @param point the point
 	 * @return if the point is inside the line
 	 */
@@ -93,7 +93,7 @@ public class Line extends Shape {
 
 	/**
 	 * Moves the line
-	 * 
+	 *
 	 * @param dx the horizontal move of the line
 	 * @param dy the vertical move of the line
 	 */

@@ -8,7 +8,7 @@ class Pixel {
 
 	/**
 	 * Creates a new pixel
-	 * 
+	 *
 	 * @param value the value of this pixel
 	 */
 	public Pixel(char value) {
@@ -17,7 +17,7 @@ class Pixel {
 
 	/**
 	 * Returns the value of this pixel
-	 * 
+	 *
 	 * @return the value of this pixel
 	 */
 	private char getValue() {
@@ -26,7 +26,7 @@ class Pixel {
 
 	/**
 	 * Sets the value of this pixel
-	 * 
+	 *
 	 * @param value the value of this pixel
 	 */
 	public void setValue(char value) {
@@ -35,7 +35,7 @@ class Pixel {
 
 	/**
 	 * Returns a string representing the pixel
-	 * 
+	 *
 	 * @return a string representing the pixel
 	 */
 	@Override

@@ -9,7 +9,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Creates a new rectangle
-	 * 
+	 *
 	 * @param width   the width of the rectangle
 	 * @param height  the height of the rectangle
 	 * @param center  the center of the rectangle
@@ -34,7 +34,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Returns the width of the rectangle
-	 * 
+	 *
 	 * @return the width of the rectangle
 	 */
 	private double getWidth() {
@@ -43,7 +43,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Sets the width of the rectangle
-	 * 
+	 *
 	 * @param width the width of the rectangle
 	 * @throws IllegalArgumentException if the width id negative
 	 */
@@ -56,7 +56,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Returns the height of the rectangle
-	 * 
+	 *
 	 * @return the height of the rectangle
 	 */
 	private double getHeight() {
@@ -65,7 +65,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Sets the height of the rectangle
-	 * 
+	 *
 	 * @param height the height of the rectangle
 	 * @throws IllegalArgumentException if the height of the rectangle is negative
 	 */
@@ -78,7 +78,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Returns a string representing the rectangle
-	 * 
+	 *
 	 * @return a string representing the rectangle
 	 */
 	@Override
@@ -95,7 +95,7 @@ public class Rectangle extends Shape {
 
 	/**
 	 * Checks if a point is inside the rectangle
-	 * 
+	 *
 	 * @param point the point
 	 * @return if the point is inside the rectangle
 	 */

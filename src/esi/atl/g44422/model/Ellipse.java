@@ -6,7 +6,7 @@ package esi.atl.g44422.model;
 public class Ellipse extends Shape {
 	private double radiusX;
 	private double radiusY;
-
+// --> sous-classe Circle
 	/**
 	 * Creates a new ellipse or circle
 	 *

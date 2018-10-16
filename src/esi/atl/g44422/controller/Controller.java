@@ -82,7 +82,7 @@ public class Controller {
 	 *
 	 * @param args an array the the different words of the command
 	 */
-	private void handleCommand(ArrayList<String> args) {
+	private void handleCommand(ArrayList<String> args) { // BCP trop long.
 		if (hasGoodNumberOfArguments(0, 10, args)) {
 			switch (args.get(0).toLowerCase()) {
 				case "add": {
@@ -453,7 +453,7 @@ public class Controller {
 				case "":
 					break;
 				default:
-					throw new Error("Unknown command");
+					throw new Error("Unknown command: ");// message incomplet
 			}
 		}
 	}

@@ -5,7 +5,7 @@ package esi.atl.g44422.model;
  */
 public abstract class Shape {
 	private Point center;
-	private ShapeType type;
+	private ShapeType type; // inutile -> déjà dans les classes.
 	private char fill;
 	private char outline;
 	private int id;
@@ -123,7 +123,7 @@ public abstract class Shape {
 	 */
 	public void setId(int id) throws IllegalArgumentException {
 		if (id < 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException(); // message !
 		}
 		this.id = id;
 	}

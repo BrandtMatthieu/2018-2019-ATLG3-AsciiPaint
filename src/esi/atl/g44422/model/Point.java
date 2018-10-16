@@ -3,7 +3,7 @@ package esi.atl.g44422.model;
 /**
  * Represents a point in the Model
  */
-public class Point extends Shape {
+public class Point extends Shape { // un point n'est pas une shape
 	private double x;
 	private double y;
 
@@ -12,7 +12,7 @@ public class Point extends Shape {
 	 *
 	 * @param x       the horizontal position of the point
 	 * @param y       the vertical position of the point
-	 * @param center  the center of the point
+	 * @param center  the center of the point // bof
 	 * @param type    the type of the shape (point)
 	 * @param fill    the fill of the point
 	 * @param outline the outline of the point
